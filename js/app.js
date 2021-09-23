@@ -48,7 +48,6 @@ function eliminarCurso(e) {
 function leerDatosCurso(curso) {
 
     // Crear un objeto con el contenido del curso actual
-    console.log(curso.querySelector('img'));
     const infoCurso = {
         imagen: curso.querySelector('img').src,
         titulo: curso.querySelector('h4').textContent,
@@ -71,9 +70,6 @@ function leerDatosCurso(curso) {
         articulosCarrito = [...articulosCarrito, infoCurso];
     }
 
-
-
-    console.log(articulosCarrito);
     carritoHTML();
 }
 
@@ -89,7 +85,7 @@ function carritoHTML() {
         const {imagen, titulo, precio, cantidad, id} = curso;
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><img scr="${imagen}" with="100"></td>
+            <td><img src="${imagen}" width="100"></td>
             <td>${titulo}</td>
             <td>${precio}</td>
             <td>${cantidad}</td>
